@@ -1,0 +1,27 @@
+name: Capstones
+
+# Builds and tests the three capstone projects that the lessons embed,
+# so the code in the course is always known to compile and pass.
+
+on:
+  push:
+    branches: [main]
+    paths: ["capstones/**", "docs/**", "README.md", ".github/workflows/ci.yml"]
+  pull_request:
+    paths: ["capstones/**", "docs/**", "README.md", ".github/workflows/ci.yml"]
+  workflow_dispatch:
+
+jobs:
+  capstones:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.0.x"
+      - run: bash capstones/ci.sh

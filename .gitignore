@@ -1,0 +1,15 @@
+# MkDocs build output
+site/
+
+# .NET build output
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db

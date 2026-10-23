@@ -1,0 +1,95 @@
+site_name: The C# Course
+site_description: A complete, self-paced C# curriculum — beginner to advanced.
+site_url: https://hunterghall.github.io/csharp-course/
+repo_url: https://github.com/HunterGHall/csharp-course
+repo_name: HunterGHall/csharp-course
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - toc.follow
+    - search.suggest
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Beginner:
+      - beginner/index.md
+      - 1. Setup & your first program: beginner/01-setup-and-first-program.md
+      - 2. Variables & types: beginner/02-variables-and-types.md
+      - 3. Numbers & math: beginner/03-numbers-and-math.md
+      - 4. Strings & characters: beginner/04-strings.md
+      - 5. Booleans & conditionals: beginner/05-booleans-and-conditionals.md
+      - 6. Loops: beginner/06-loops.md
+      - 7. Arrays & lists: beginner/07-arrays-and-lists.md
+      - 8. Dictionaries & sets: beginner/08-dictionaries-and-sets.md
+      - 9. Methods: beginner/09-methods.md
+      - 10. Nullable values: beginner/10-nullable.md
+      - 11. Files & exceptions: beginner/11-files-and-exceptions.md
+      - 12. Capstone - task tracker: beginner/12-capstone-task-tracker.md
+  - Intermediate:
+      - intermediate/index.md
+      - 1. Classes, structs & records: intermediate/01-classes-structs-records.md
+      - 2. Properties & members: intermediate/02-properties-and-members.md
+      - 3. Enums & pattern matching: intermediate/03-enums-and-pattern-matching.md
+      - 4. Interfaces & inheritance: intermediate/04-interfaces-and-inheritance.md
+      - 5. Generics: intermediate/05-generics.md
+      - 6. Delegates, lambdas & LINQ: intermediate/06-delegates-lambdas-linq.md
+      - 7. Memory, GC & disposal: intermediate/07-memory-gc-and-disposal.md
+      - 8. Exceptions in depth: intermediate/08-exceptions-in-depth.md
+      - 9. JSON & serialization: intermediate/09-json-and-serialization.md
+      - 10. Projects, solutions & NuGet: intermediate/10-projects-and-nuget.md
+      - 11. Testing: intermediate/11-testing.md
+      - 12. Capstone - link checker: intermediate/12-capstone-link-checker.md
+  - Advanced:
+      - advanced/index.md
+      - 1. Modern type design: advanced/01-modern-type-design.md
+      - 2. Advanced generics: advanced/02-advanced-generics.md
+      - 3. Reflection & attributes: advanced/03-reflection-and-attributes.md
+      - 4. Source generators & analyzers: advanced/04-source-generators.md
+      - 5. Async/await & the Task model: advanced/05-async-await.md
+      - 6. Threads & synchronization: advanced/06-threads-and-synchronization.md
+      - 7. Channels & async streams: advanced/07-channels-and-async-streams.md
+      - 8. Span, Memory & low-allocation code: advanced/08-span-and-memory.md
+      - 9. Performance & profiling: advanced/09-performance.md
+      - 10. Unsafe code & native interop: advanced/10-unsafe-and-interop.md
+      - 11. Packaging, AOT & distribution: advanced/11-packaging-aot-and-distribution.md
+      - 12. Capstone - parallel file indexer: advanced/12-capstone-parallel-indexer.md
